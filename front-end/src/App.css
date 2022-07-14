@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#basic-home{
+  border: 2px solid black;
+  padding: 20px;
+  margin: 75px;
+  width: 500px;
+}
+#login-basic{
+  margin: 80px;
+}
+#signup-basic{
+  margin: 40px;
+}
