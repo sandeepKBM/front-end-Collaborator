@@ -28,7 +28,7 @@ body{
   background-color: aquamarine;
   justify-content:space-around;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   height: 35px;
   padding: 5px;
 }

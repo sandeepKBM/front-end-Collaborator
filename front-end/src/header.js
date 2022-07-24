@@ -10,6 +10,9 @@ function Header() {
         Name
         </div>
         <div>
+           <NavLink to="/forum">Forum</NavLink>
+        </div>
+        <div>
            <NavLink to="/login">Login</NavLink>
         </div>
     </div>

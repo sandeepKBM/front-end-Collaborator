@@ -6,6 +6,7 @@ import SignUp from './signup';
 import Home from './home'
 import Header from './header';
 import Footer from './footer';
+import Forum from './forum';
 function App() {
   return (
     <div className="App">
@@ -14,7 +15,8 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/loginsignup" element={<LoginSignup/>}></Route>
         <Route path="/login" element={<Login />}></Route>
-        <Route path="/signup"  element={<SignUp />}></Route>
+        <Route path="/signup" element={<SignUp />}></Route>
+        <Route path="/forum" element={<Forum />}></Route>
       </Routes>
       <Footer />
     </div>
