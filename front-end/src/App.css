@@ -41,6 +41,17 @@ html, body {
   grid-template-columns: auto auto auto auto;
   width: 150px;
 }
+#forum-heading{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  font-size: 45px;
+}
+#forum-display1{
+  display: grid;
+  grid-template-columns: auto auto;
+  font-size: 45px;
+  border: 2px solid black;
+}
 #footer{
   display: block;
   margin-top:120px;
