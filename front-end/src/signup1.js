@@ -2,6 +2,7 @@ import './App.css';
 import { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
 import validator from 'validator';
+import Axios from "axios";
 function SignUpFacutly() {
     const navigate=useNavigate();
     const [ID,setID]=useState("");
@@ -51,8 +52,15 @@ function SignUpFacutly() {
         }
         else
         {
-            alert('Sucessfully Registred, soon you will receive confirmation from HOD');
-            navigate("/");
+            const postData={
+                name: this.entry.email,
+                password: this.entry.password,
+                desgination: "STUDENT"
+            }
+            Axios.post('http://localhost:8080/api/v1/users/save', postData).then((response) => {
+                alert('Sucessfully Registred, soon you will receive confirmation from HOD');
+                navigate("/");
+            });
         }
     }
   return (
