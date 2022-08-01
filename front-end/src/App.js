@@ -7,6 +7,7 @@ import Home from './home'
 import Header from './header';
 import Footer from './footer';
 import Forum from './forum';
+import AddDiscussion from './AddDiscussion';
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
         <Route path="/forum" element={<Forum />}></Route>
+        <Route path="/adddiscussion" element={<AddDiscussion />}></Route>
       </Routes>
       <Footer />
     </div>

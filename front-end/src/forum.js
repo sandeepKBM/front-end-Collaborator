@@ -1,6 +1,8 @@
 import './App.css';
 import ForumContent from './forumcontent';
+import {useNavigate} from 'react-router-dom';
 function Forum() {
+  const navigate=useNavigate();
   const forum=[{name:"Name",creation:"Creation",message_count:45,last_poster:"Last_Poster"}]
   const arr1=[{id:123,time:"time1",quotes:"quotes1",interaction:"interaction1"},
   {id:124,time:"time2",quotes:"quotes2",interaction:"interaction2"},
@@ -24,6 +26,7 @@ function Forum() {
           {forum[0].last_poster}
         </div>
       </div>
+      <button onClick={()=>{navigate('/adddiscussion')}}>+</button>
       {
         arr1.map((val)=>{
           let index = arr2.map(x=>x.id).indexOf(val.id)
