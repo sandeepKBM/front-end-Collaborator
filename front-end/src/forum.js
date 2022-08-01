@@ -1,21 +1,52 @@
 import './App.css';
-import ForumContent from './forumcontent';
 import {useNavigate} from 'react-router-dom';
+import {useState} from 'react';
 function Forum() {
   const navigate=useNavigate();
-  const forum=[{name:"Name",creation_on:"Creation ON",description:"description",created_by:"Created by"},
-  {name:"Name",creation_on:"Creation ON",description:"description",created_by:"Created by"}]
-  // const arr1=[{id:123,time:"time1",quotes:"quotes1",interaction:"interaction1"},
-  // {id:124,time:"time2",quotes:"quotes2",interaction:"interaction2"},
-  // {id:125,time:"time3",quotes:"quotes3",interaction:"interaction3"}]
-  // const arr2=[{id:124,name:"name1",image:"image1",desgination:"desgination1"},
-  // {id:123,name:"name2",image:"image2",desgination:"desgination2"},
-  // {id:125,name:"name3",image:"image3",desgination:"desgination3"}]
+  const [forum,setForum]=useState([{name:"Name",creation_on:"Creation ON",description:"description",created_by:"Created by"},
+  {name:"Name",creation_on:"Creation ON",description:"description",created_by:"Created by"}]);
+  const [quotes,setQuotes]=useState("");
+    const [desc,setDesc]=useState("");
+    function SubmitForum(){
+        if(quotes==='' && desc==='')
+        {
+            let message="";
+            if(quotes==='')
+            {
+                message+="Please enter quotes\n";
+            }
+            if(desc==='')
+            {
+                message+="Please enter desc\n";
+            }
+            alert(message);
+        }
+        else{
+            alert('sucessfully done');
+            setForum([...forum,{name:quotes,creation_on:"Creation ON",description:desc,created_by:"Created by"}])
+        }
+    }
   return (
     <div className="App">
-      <button id="add-icon" onClick={()=>{navigate('/adddiscussion')}}>Create</button>
+      {/* <button id="add-icon" onClick={()=>{navigate('/adddiscussion')}}>Create</button> */}
       <br></br>
-      <br></br>
+      <div className="Login">
+        <center>
+          <h2>Add Discussions</h2>
+            <div id="login-basic">
+              <label>Name :  </label><input type="text"
+              onChange={(event)=>{setQuotes(event.target.value)}}></input>
+              <br></br>
+              <br></br>
+              <label>Description :  </label><input type="text"
+              onChange={(event)=>{setDesc(event.target.value)}}></input>
+              <br></br>
+              <br></br>
+              <button onClick={SubmitForum}>Submit</button>
+            </div>
+            <br></br>
+        </center>
+    </div>
         {
           forum.map((val)=>{
               return<>
@@ -37,7 +68,6 @@ function Forum() {
             <br></br>
             <button onClick={()=>{navigate('/dispage')}}>Disscussion Page</button>
               </center>
-              
               </>
           })
         }
