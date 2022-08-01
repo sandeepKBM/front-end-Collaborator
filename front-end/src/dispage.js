@@ -4,6 +4,7 @@ import {useNavigate} from 'react-router-dom';
 function DisPage() {
     const navigate=useNavigate();
   const [quotes,setQuotes]=useState("");
+  const textarr=[];
   function SubmitForum(){
     if(quotes==='')
     {
@@ -15,6 +16,8 @@ function DisPage() {
         alert(message);
     }
     else{
+      textarr.push({text:quotes,id: 200, time: new Date().toLocaleString() });
+      console.log(textarr);
         alert('sucessfully done');
         navigate('/forum');
     }

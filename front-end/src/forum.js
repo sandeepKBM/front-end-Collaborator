@@ -14,10 +14,8 @@ function Forum() {
   return (
     <div className="App">
       <button id="add-icon" onClick={()=>{navigate('/adddiscussion')}}>Create</button>
-      
-      <center>
-        <br>
-        </br>
+      <br></br>
+      <br></br>
         {
           forum.map((val)=>{
               return<>
@@ -36,42 +34,15 @@ function Forum() {
                 {val.created_by}
               </div>
             </div>
+            <br></br>
             <button onClick={()=>{navigate('/dispage')}}>Disscussion Page</button>
               </center>
               
               </>
           })
         }
-      {/* <div id="forum-heading">
-        <div id="border-add">
-          {forum[0].name}
-        </div>
-        <div id="border-add">
-          {forum[0].creation_on}
-        </div>
-        <div id="border-add">
-          {forum[0].description}
-        </div>
-        <div id="border-add">
-          {forum[0].created_by}
-        </div>
-      </div> */}
-      </center>
       <br></br>
       <br></br>
-      {/* {
-        arr1.map((val)=>{
-          let index = arr2.map(x=>x.id).indexOf(val.id)
-          if (index > -1 ) {
-            return<>
-            <ForumContent id={val.id} time={val.time} quotes={val.quotes}
-            interaction={val.interaction} name={arr2[index].name}
-            image={arr2[index].image} desgination={arr2[index].desgination}/>
-            <br>
-            </br></>
-          }
-        })
-      } */}
     </div>
   );
 }
