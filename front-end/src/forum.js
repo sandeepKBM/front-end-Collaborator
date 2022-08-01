@@ -12,20 +12,24 @@ function Forum() {
   // {id:125,name:"name3",image:"image3",desgination:"desgination3"}]
   return (
     <div className="App">
+      <center>
+        <br>
+        </br>
       <div id="forum-heading">
-        <div>
+        <div id="border-add">
           {forum[0].name}
         </div>
-        <div>
+        <div id="border-add">
           {forum[0].creation_on}
         </div>
-        <div>
+        <div id="border-add">
           {forum[0].description}
         </div>
-        <div>
+        <div id="border-add">
           {forum[0].created_by}
         </div>
       </div>
+      </center>
       <button onClick={()=>{navigate('/adddiscussion')}}>+</button>
       <br></br>
       <br></br>

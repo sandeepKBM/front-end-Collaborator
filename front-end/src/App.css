@@ -45,6 +45,10 @@ html, body {
   display: grid;
   grid-template-columns: auto auto;
   font-size: 30px;
+  width: 50%;
+}
+#border-add{
+  border: 2px solid black;
 }
 #forum-display1{
   display: grid;
