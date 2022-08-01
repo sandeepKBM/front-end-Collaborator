@@ -28,11 +28,11 @@ function Add() {
     <div className="Login">
         <center>
             <div id="login-basic">
-              <label>Quotes :  </label><input type="text"
+              <label>Name :  </label><input type="text"
               onChange={(event)=>{setQuotes(event.target.value)}}></input>
               <br></br>
               <br></br>
-              <label>Desc :  </label><input type="text"
+              <label>Description :  </label><input type="text"
               onChange={(event)=>{setDesc(event.target.value)}}></input>
               <br></br>
               <br></br>
@@ -40,7 +40,6 @@ function Add() {
             </div>
             <NavLink to="/forum">Forum Page</NavLink>
             <br></br>
-            <NavLink to="/">Home Page</NavLink>
         </center>
     </div>
   );

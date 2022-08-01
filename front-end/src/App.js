@@ -9,6 +9,7 @@ import Footer from './footer';
 import Forum from './forum';
 import AddDiscussion from './AddDiscussion';
 import MoreDis from './moredis';
+import DisPage from './dispage';
 function App() {
   return (
     <div className="App">
@@ -21,6 +22,7 @@ function App() {
         <Route path="/forum" element={<Forum />}></Route>
         <Route path="/adddiscussion" element={<AddDiscussion />}></Route>
         <Route path="/moredis" element={<MoreDis />}></Route>
+        <Route path="/dispage"element={<DisPage />}></Route>
       </Routes>
       <Footer />
     </div>
