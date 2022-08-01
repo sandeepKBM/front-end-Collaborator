@@ -27,6 +27,8 @@ function Forum() {
         </div>
       </div>
       <button onClick={()=>{navigate('/adddiscussion')}}>+</button>
+      <br></br>
+      <br></br>
       {
         arr1.map((val)=>{
           let index = arr2.map(x=>x.id).indexOf(val.id)

@@ -8,6 +8,7 @@ import Header from './header';
 import Footer from './footer';
 import Forum from './forum';
 import AddDiscussion from './AddDiscussion';
+import MoreDis from './moredis';
 function App() {
   return (
     <div className="App">
@@ -19,6 +20,7 @@ function App() {
         <Route path="/signup" element={<SignUp />}></Route>
         <Route path="/forum" element={<Forum />}></Route>
         <Route path="/adddiscussion" element={<AddDiscussion />}></Route>
+        <Route path="/moredis" element={<MoreDis />}></Route>
       </Routes>
       <Footer />
     </div>

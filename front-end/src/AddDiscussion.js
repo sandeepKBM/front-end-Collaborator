@@ -38,7 +38,7 @@ function Add() {
               <br></br>
               <button onClick={SubmitForum}>Submit</button>
             </div>
-            <NavLink to="/forum">NForum Page</NavLink>
+            <NavLink to="/forum">Forum Page</NavLink>
             <br></br>
             <NavLink to="/">Home Page</NavLink>
         </center>

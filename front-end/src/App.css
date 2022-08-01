@@ -44,13 +44,14 @@ html, body {
 #forum-heading{
   display: grid;
   grid-template-columns: auto auto auto auto;
-  font-size: 45px;
+  font-size: 40px;
 }
 #forum-display1{
   display: grid;
   grid-template-columns: auto auto;
-  font-size: 45px;
+  font-size: 20px;
   border: 2px solid black;
+  width: 50%;
 }
 #footer{
   display: block;
