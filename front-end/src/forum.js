@@ -3,7 +3,7 @@ import ForumContent from './forumcontent';
 import {useNavigate} from 'react-router-dom';
 function Forum() {
   const navigate=useNavigate();
-  const forum=[{name:"Name",creation:"Creation",message_count:45,last_poster:"Last_Poster"}]
+  const forum=[{name:"Name",creation_on:"Creation ON",description:"description",created_by:"Created by"}]
   const arr1=[{id:123,time:"time1",quotes:"quotes1",interaction:"interaction1"},
   {id:124,time:"time2",quotes:"quotes2",interaction:"interaction2"},
   {id:125,time:"time3",quotes:"quotes3",interaction:"interaction3"}]
@@ -17,13 +17,13 @@ function Forum() {
           {forum[0].name}
         </div>
         <div>
-          {forum[0].creation}
+          {forum[0].creation_on}
         </div>
         <div>
-          {forum[0].message_count}
+          {forum[0].description}
         </div>
         <div>
-          {forum[0].last_poster}
+          {forum[0].created_by}
         </div>
       </div>
       <button onClick={()=>{navigate('/adddiscussion')}}>+</button>

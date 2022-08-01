@@ -43,8 +43,8 @@ html, body {
 }
 #forum-heading{
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  font-size: 40px;
+  grid-template-columns: auto auto;
+  font-size: 30px;
 }
 #forum-display1{
   display: grid;
