@@ -12,6 +12,8 @@ function Forum() {
   // {id:125,name:"name3",image:"image3",desgination:"desgination3"}]
   return (
     <div className="App">
+      <button id="add-icon" onClick={()=>{navigate('/adddiscussion')}}>Create</button>
+      
       <center>
         <br>
         </br>
@@ -30,7 +32,6 @@ function Forum() {
         </div>
       </div>
       </center>
-      <button onClick={()=>{navigate('/adddiscussion')}}>+</button>
       <br></br>
       <br></br>
       {/* {

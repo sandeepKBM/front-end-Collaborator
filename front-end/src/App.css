@@ -63,3 +63,6 @@ html, body {
   background-color: rgba(165, 42, 42, 0.32);
   padding: 10px;
 }
+#add-icon{
+  float: right;
+}
