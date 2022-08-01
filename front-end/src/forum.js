@@ -3,7 +3,8 @@ import ForumContent from './forumcontent';
 import {useNavigate} from 'react-router-dom';
 function Forum() {
   const navigate=useNavigate();
-  const forum=[{name:"Name",creation_on:"Creation ON",description:"description",created_by:"Created by"}]
+  const forum=[{name:"Name",creation_on:"Creation ON",description:"description",created_by:"Created by"},
+  {name:"Name",creation_on:"Creation ON",description:"description",created_by:"Created by"}]
   // const arr1=[{id:123,time:"time1",quotes:"quotes1",interaction:"interaction1"},
   // {id:124,time:"time2",quotes:"quotes2",interaction:"interaction2"},
   // {id:125,time:"time3",quotes:"quotes3",interaction:"interaction3"}]
@@ -17,7 +18,31 @@ function Forum() {
       <center>
         <br>
         </br>
-      <div id="forum-heading">
+        {
+          forum.map((val)=>{
+              return<>
+              <center>
+              <div id="forum-heading">
+              <div id="border-add">
+                {val.name}
+              </div>
+              <div id="border-add">
+                {val.creation_on}
+              </div>
+              <div id="border-add">
+                {val.description}
+              </div>
+              <div id="border-add">
+                {val.created_by}
+              </div>
+            </div>
+            <button onClick={()=>{navigate('/dispage')}}>Disscussion Page</button>
+              </center>
+              
+              </>
+          })
+        }
+      {/* <div id="forum-heading">
         <div id="border-add">
           {forum[0].name}
         </div>
@@ -30,7 +55,7 @@ function Forum() {
         <div id="border-add">
           {forum[0].created_by}
         </div>
-      </div>
+      </div> */}
       </center>
       <br></br>
       <br></br>
@@ -47,7 +72,6 @@ function Forum() {
           }
         })
       } */}
-      <button onClick={()=>{navigate('/dispage')}}>Disscussion Page</button>
     </div>
   );
 }
