@@ -27,7 +27,6 @@ function Forum() {
         }
     }
   return (
-    
     <div className="App">
       {/* <button id="add-icon" onClick={()=>{navigate('/adddiscussion')}}>Create</button> */}
       <br></br>

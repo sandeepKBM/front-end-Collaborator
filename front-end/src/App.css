@@ -15,10 +15,8 @@
   margin: 40px;
 }
 body{
-  background-color: rgba(255, 127, 80, 0.523);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
 }
 #logo-img{
   height: 25px;
@@ -28,7 +26,7 @@ body{
   background-color: aquamarine;
   justify-content:space-around;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
   height: 35px;
   padding: 5px;
 }
@@ -59,10 +57,67 @@ html, body {
 }
 #footer{
   display: block;
+  width:100%;
   margin-top:120px;
   background-color: rgba(165, 42, 42, 0.32);
   padding: 10px;
 }
 #add-icon{
   float: right;
+}
+#head-view{
+  text-align: center;
+}
+#title-view{
+  font-family: 'Oxanium', cursive;
+  font-size: 80px;
+}
+#title2-view{
+  font-family: 'Changa', sans-serif;
+  font-size: 22px;
+}
+#hr-view{
+  width: 75%;
+  margin: auto;
+  border: 1px solid #000000;
+  margin-bottom: 20px;
+}
+#content-view{
+  display: flex;
+  flex-wrap: wrap;
+}
+#box-view{
+  width: 270px;
+  background: #96FCE3;
+  box-shadow: 5px 10px 10px #79D3BE;
+  border-radius: 40px;
+  padding: 20px;
+  margin: 50px;
+}
+#box-hr-view{
+  width: 250px;
+  margin: auto;
+  border: 1px solid #000000;
+  margin: 20px;
+}
+#box-text-view{
+  font-family: 'Oxanium', cursive;
+  font-size: 18px;
+  text-align: left;
+}
+#box-button-view{
+  width: 226px;
+  height: 35px;
+  margin: 10px;
+  background: #F5A3A3;
+  border-radius: 40px;
+  font-family: 'Oxanium', cursive;
+}
+#box-title-view{
+  width: 377px;
+  font-family: 'Urbanist', sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  text-align: center;
+  color: #000000;
 }

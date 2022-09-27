@@ -10,6 +10,7 @@ import Forum from './forum';
 import AddDiscussion from './AddDiscussion';
 import MoreDis from './moredis';
 import DisPage from './dispage';
+import Newsletter from './Newsletter';
 function App() {
   return (
     <div className="App">
@@ -22,7 +23,8 @@ function App() {
         <Route path="/forum" element={<Forum />}></Route>
         <Route path="/adddiscussion" element={<AddDiscussion />}></Route>
         <Route path="/moredis" element={<MoreDis />}></Route>
-        <Route path="/dispage"element={<DisPage />}></Route>
+        <Route path="/dispage" element={<DisPage />}></Route>
+        <Route path="/newsletter" element={<Newsletter />}></Route>
       </Routes>
       <Footer />
     </div>
