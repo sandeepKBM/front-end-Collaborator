@@ -1,36 +1,48 @@
 import './App.css';
 import {useNavigate} from 'react-router-dom';
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
+import Axios from "axios";
 function Forum() {
+  // const navigate=useNavigate();
+  // const [forum,setForum]=useState([{name:"Name",creation_on:"Creation ON",description:"description",created_by:"Created by"},
+  // {name:"Name",creation_on:"Creation ON",description:"description",created_by:"Created by"}]);
+  // const [quotes,setQuotes]=useState("");
+  //   const [desc,setDesc]=useState("");
+  //   function SubmitForum(){
+  //       if(quotes==='' && desc==='')
+  //       {
+  //           let message="";
+  //           if(quotes==='')
+  //           {
+  //               message+="Please enter quotes\n";
+  //           }
+  //           if(desc==='')
+  //           {
+  //               message+="Please enter desc\n";
+  //           }
+  //           alert(message);
+  //       }
+  //       else{
+  //           alert('sucessfully done');
+  //           setForum([...forum,{name:quotes,creation_on:"Creation ON",description:desc,created_by:"Created by"}])
+  //       }
+  //   }
   const navigate=useNavigate();
-  const [forum,setForum]=useState([{name:"Name",creation_on:"Creation ON",description:"description",created_by:"Created by"},
-  {name:"Name",creation_on:"Creation ON",description:"description",created_by:"Created by"}]);
-  const [quotes,setQuotes]=useState("");
-    const [desc,setDesc]=useState("");
-    function SubmitForum(){
-        if(quotes==='' && desc==='')
-        {
-            let message="";
-            if(quotes==='')
-            {
-                message+="Please enter quotes\n";
-            }
-            if(desc==='')
-            {
-                message+="Please enter desc\n";
-            }
-            alert(message);
-        }
-        else{
-            alert('sucessfully done');
-            setForum([...forum,{name:quotes,creation_on:"Creation ON",description:desc,created_by:"Created by"}])
-        }
+    // let forum = [{name:"Name",creation_on:"Creation ON",description:"description",created_by:"Created by"}]
+    const [forum, setState] = useState([])
+    useEffect(() => {
+        getData()
+    },[])
+    async function getData(){
+        Axios.get('http://localhost:8080/api/discussions/listAll').then((res) => {
+        setState(res.data)
+        });
     }
   return (
     <div className="App">
       {/* <button id="add-icon" onClick={()=>{navigate('/adddiscussion')}}>Create</button> */}
       <br></br>
-      <div className="Login">
+      {/* <div className="Login">
         <center>
           <h2>Add Discussions</h2>
             <div id="login-basic">
@@ -46,7 +58,7 @@ function Forum() {
             </div>
             <br></br>
         </center>
-    </div>
+    </div> */}
         {
           forum.map((val)=>{
               return<>
@@ -66,7 +78,10 @@ function Forum() {
               </div>
             </div>
             <br></br>
-            <button onClick={()=>{navigate('/dispage')}}>Disscussion Page</button>
+            <button onClick={()=>{
+                navigate('/dispage')
+                    localStorage.setItem("dissID",val.id);
+                    }}>Disscussion Page</button>
               </center>
               </>
           })

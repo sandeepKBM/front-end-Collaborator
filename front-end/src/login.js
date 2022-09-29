@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import {NavLink,useNavigate} from 'react-router-dom';
+import Axios from "axios";
 function Login() {
   const navigate = useNavigate();
   const [userName,setUserName]=useState("");
@@ -26,8 +27,17 @@ function Login() {
     }
     else
     {
-      alert(userName+" "+password+" "+user);
-      navigate("/");
+      const loginData = {
+        username: userName,
+        password: password
+    }
+      // alert(userName+" "+password+" "+user);
+      Axios.post('http://localhost:8080/login', loginData).then((response) => {
+        localStorage.setItem("id", userName);
+        localStorage.setItem("pass",password);
+        alert('Sucessful! Welcome'+response.headers.toString());
+        navigate("/");
+      });
     }
   }
   return (

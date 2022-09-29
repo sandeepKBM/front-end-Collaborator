@@ -85,9 +85,10 @@ html, body {
 #content-view{
   display: flex;
   flex-wrap: wrap;
+  margin: auto;
 }
 #box-view{
-  width: 270px;
+  /* width: 270px; */
   background: #96FCE3;
   box-shadow: 5px 10px 10px #79D3BE;
   border-radius: 40px;
@@ -95,10 +96,10 @@ html, body {
   margin: 50px;
 }
 #box-hr-view{
-  width: 250px;
-  margin: auto;
+  /* width: 250px; */
+  /* margin: auto; */
   border: 1px solid #000000;
-  margin: 20px;
+  margin: 10px;
 }
 #box-text-view{
   font-family: 'Oxanium', cursive;
@@ -106,7 +107,7 @@ html, body {
   text-align: left;
 }
 #box-button-view{
-  width: 226px;
+  /* width: 226px; */
   height: 35px;
   margin: 10px;
   background: #F5A3A3;
@@ -114,10 +115,13 @@ html, body {
   font-family: 'Oxanium', cursive;
 }
 #box-title-view{
-  width: 377px;
+  /* width: 357px; */
   font-family: 'Urbanist', sans-serif;
   font-style: normal;
   font-size: 20px;
   text-align: center;
   color: #000000;
+}
+#full-content-view{
+  width:320px;
 }

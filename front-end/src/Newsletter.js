@@ -13,7 +13,7 @@ function Newsletter(){
 
         </div>
         <div id="content-view">
-            <div id="full-contnet-view">
+            <div id="full-content-view">
                 <div id="box-title-view">
                     University
                 </div>
@@ -44,7 +44,7 @@ function Newsletter(){
                     </button>
                 </div>
             </div>
-            <div>
+            <div id="full-content-view">
                 <div id="box-title-view">
                     Local
                 </div>
@@ -75,7 +75,7 @@ function Newsletter(){
                     </button>
                 </div>
             </div>
-            <div>
+            <div id="full-content-view">
                 <div id="box-title-view">
                     Other Universities
                 </div>
