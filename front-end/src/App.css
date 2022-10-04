@@ -9,14 +9,18 @@
   width: 500px;
 }
 #login-basic{
-  margin: 80px;
+  margin: 45px;
+  width: 45%;
+  padding: 30px;
+  background: #BBFCBA;
+  border: 1px solid #000000;
+  border-radius: 30px;
 }
 #signup-basic{
-  margin: 40px;
+  margin: 20px;
 }
 body{
   overflow-x: hidden;
-  /* overflow-y: hidden; */
 }
 #logo-img{
   height: 25px;
@@ -88,7 +92,6 @@ html, body {
   margin: auto;
 }
 #box-view{
-  /* width: 270px; */
   background: #96FCE3;
   box-shadow: 5px 10px 10px #79D3BE;
   border-radius: 40px;
@@ -96,8 +99,6 @@ html, body {
   margin: 50px;
 }
 #box-hr-view{
-  /* width: 250px; */
-  /* margin: auto; */
   border: 1px solid #000000;
   margin: 10px;
 }
@@ -107,7 +108,6 @@ html, body {
   text-align: left;
 }
 #box-button-view{
-  /* width: 226px; */
   height: 35px;
   margin: 10px;
   background: #F5A3A3;
@@ -115,7 +115,6 @@ html, body {
   font-family: 'Oxanium', cursive;
 }
 #box-title-view{
-  /* width: 357px; */
   font-family: 'Urbanist', sans-serif;
   font-style: normal;
   font-size: 20px;
@@ -124,4 +123,51 @@ html, body {
 }
 #full-content-view{
   width:320px;
+}
+#head-login{
+  text-align: center;
+}
+#title-login{
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  padding: 15px;
+}
+#button-login{
+  background: #ECFFEB;
+  border: 1px solid #000000;
+  border-radius: 29px;
+  width: 100px;
+  height: 25px;
+}
+#new-login{
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+#input-login{
+  background: #FFF8F8;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  width:50%;
+}
+input::placeholder{
+  text-align: center;
+}
+option{
+  text-align: center;
+}
+#label-login{
+  font-family: 'Urbanist', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 38px;
+  text-align: left;
+}
+#title-signup{
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  padding: 5px;
 }

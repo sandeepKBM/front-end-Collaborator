@@ -64,51 +64,56 @@ function SignUpFacutly() {
         }
     }
   return (
-    <div>
-        <h2>Facutly Registration</h2>
-        <label>Faculty ID : </label>
+    <div id="login-basic">
+        <p id="title-signup">Facutly Registration</p>
+        <label id="label-login">Faculty ID : </label>
         <input type="text"
-        onChange={(event)=>{setID(event.target.value)}}></input>
+        onChange={(event)=>{setID(event.target.value)}} id="input-login"
+        placeholder='Enter ID'></input>
         <br></br>
-        <br></br>
-        <label>Name : </label>
+        {/* <br></br> */}
+        <label id="label-login">Name : </label>
         <input type="text"
-        onChange={(event)=>{setName(event.target.value)}}></input>
+        onChange={(event)=>{setName(event.target.value)}} id="input-login"
+        placeholder='Enter Name'></input>
         <br></br>
-        <br></br>
-        <label>Password : </label>
+        {/* <br></br> */}
+        <label id="label-login">Password : </label>
         <input type="password"
-        onChange={(event)=>{setPassword(event.target.value)}}></input>
+        onChange={(event)=>{setPassword(event.target.value)}} id="input-login"
+        placeholder='Enter Password'></input>
         <br></br>
-        <br></br>
-        <label>Retype Password</label>
+        {/* <br></br> */}
+        <label id="label-login">Retype Password : </label>
         <input type="password"
-        onChange={(event)=>{setRePssword(event.target.value)}}></input>
+        onChange={(event)=>{setRePssword(event.target.value)}} id="input-login"
+        placeholder='Enter Same Password Again'></input>
         <br></br>
-        <br></br>
-        <label>Email</label>
+        {/* <br></br> */}
+        <label id="label-login">Email : </label>
         <input type="email"
-        onChange={(event)=>{setEmail(event.target.value)}}></input>
+        onChange={(event)=>{setEmail(event.target.value)}} id="input-login"
+        placeholder='Enter Email'></input>
         <br></br>
-        <br></br>
-        <label>Department</label>
-        <select type="dropdown" onClick={(event)=>{setDept(event.target.value)}}>
+        {/* <br></br> */}
+        <label id="label-login">Department : </label>
+        <select style={{width: "50%"}} type="dropdown" onClick={(event)=>{setDept(event.target.value)}} id="input-login">
             <option value="Dept">Dept</option>
             <option value="CSE">CSE</option>
             <option value="IT">IT</option>
             <option value="ECE">ECE</option>
         </select>
         <br></br>
-        <br></br>
-        <label>Designation</label>
-        <select type="dropdown" onClick={(event)=>{setDesgination(event.target.value)}}>
+        {/* <br></br> */}
+        <label id="label-login">Designation : </label>
+        <select style={{width: "50%"}} type="dropdown" onClick={(event)=>{setDesgination(event.target.value)}} id="input-login">
             <option value="Designation">Designation</option>
             <option value="Professor">Professor</option>
             <option value="Faculty">Faculty</option>
         </select>
         <br></br>
         <br></br>
-        <button onClick={submitFacutly}>Submit</button>
+        <button  id="button-login" onClick={submitFacutly}>Submit</button>
     </div>
   );
 }

@@ -43,17 +43,24 @@ function Login() {
   return (
     <div className="Login">
         <center>
+          <div id="head-login">
+              <div id="title-login">
+                  LOGIN
+              </div>
+          </div>
             <div id="login-basic">
-              <label>UserName :  </label><input type="text"
-              onChange={(event)=>{setUserName(event.target.value)}}></input>
+              <label id="label-login">UserName :  </label><input type="text"
+              onChange={(event)=>{setUserName(event.target.value)}} id="input-login"
+              placeholder='Enter Username'></input>
               <br></br>
               <br></br>
-              <label>Password :  </label><input type="password"
-              onChange={(event)=>{setPassword(event.target.value)}}></input>
+              <label id="label-login">Password :  </label><input type="password"
+              onChange={(event)=>{setPassword(event.target.value)}} id="input-login"
+              placeholder='Enter Password'></input>
               <br></br>
               <br></br>
-              <label>Type of user : </label>
-              <select name="dropdown" onClick={(event)=>{setUser(event.target.value)}}>
+              <label id="label-login">Type of user : </label>
+              <select style={{width: "50%"}} name="dropdown" onClick={(event)=>{setUser(event.target.value)}}  id="input-login">
                 <option value="Select">Select</option>
                 <option value="Student">Student</option>
                 <option value="PhD">PhD</option>
@@ -62,11 +69,13 @@ function Login() {
               </select>
               <br></br>
               <br></br>
-              <button onClick={SubmitLogin}>Submit</button>
+              <button id="button-login" onClick={SubmitLogin}>Submit</button>
             </div>
-            <NavLink to="/signup">New to website, please Register</NavLink>
-            <br></br>
-            <NavLink to="/">Home Page</NavLink>
+            <div id="new-login">
+              <NavLink style={{textDecoration: 'none',color: 'black'}} to="/signup">New to website, please Register</NavLink>
+              <br></br>
+              <NavLink style={{textDecoration: 'none',color: 'black'}} to="/">Home Page</NavLink>
+            </div>
         </center>
     </div>
   );

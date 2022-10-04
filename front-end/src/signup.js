@@ -19,26 +19,33 @@ function SignUp() {
   return (
     <div>
         <center>
+        <div id="head-login">
+              <div id="title-login">
+                  SignUp
+              </div>
+          </div>
             <div id="signup-basic">
-                <label>Typer of user : </label>
+                <label id="label-login">Typer of user : </label>
                 <br></br>
                 <br></br>
-                <label>Student</label><input type="radio" name="user" value="Student"
-                onClick={Stusignup}></input>
+                <input type="radio" name="user" value="Student"
+                onClick={Stusignup}></input><label id="label-login">Student</label>
                 <br></br>
-                <label>Faculty</label><input type="radio" name="user" value="Faculty"
-                onClick={Facsignup}></input>
+                <input type="radio" name="user" value="Faculty"
+                onClick={Facsignup}></input><label id="label-login">Faculty</label>
                 <br></br>
-                <label>Research</label><input type="radio" name="user" value="Research"
-                onClick={Ressignup}></input>
+                <input type="radio" name="user" value="Research"
+                onClick={Ressignup}></input><label id="label-login">Research</label>
                 <br></br>
                 <br></br>
                 <hr></hr>
                 {typeSignUp}
             </div>
-            <NavLink to="/login">Already registered please click for login</NavLink>
-            <br></br>
-            <NavLink to="/">Home Page</NavLink>
+            <div id="new-login">
+                <NavLink style={{textDecoration: 'none',color: 'black'}} to="/login">Already registered please click for login</NavLink>
+                <br></br>
+                <NavLink style={{textDecoration: 'none',color: 'black'}} to="/">Home Page</NavLink>
+            </div>
         </center>
     </div>
   );

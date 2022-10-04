@@ -56,40 +56,47 @@ function SignUpStudent() {
         }
     }
   return (
-    <div>
-        <h2>Student Registration</h2>
-        <label>Faculty ID : </label>
+    <div id="login-basic">
+        <p id="title-signup">Student Registration</p>
+        <label id="label-login">Student ID : </label>
         <input type="text"
-        onChange={(event)=>{setID(event.target.value)}}></input>
+        onChange={(event)=>{setID(event.target.value)}} id="input-login"
+        placeholder='Enter ID'></input>
+        {/* <br></br> */}
         <br></br>
-        <br></br>
-        <label>Name : </label>
+        <label id="label-login">Name : </label>
         <input type="text"
-        onChange={(event)=>{setName(event.target.value)}}></input>
+        onChange={(event)=>{setName(event.target.value)}} id="input-login"
+        placeholder='Enter Name'></input>
+        {/* <br></br> */}
         <br></br>
-        <br></br>
-        <label>Password : </label>
+        <label id="label-login">Password : </label>
         <input type="password"
-        onChange={(event)=>{setPassword(event.target.value)}}></input>
+        onChange={(event)=>{setPassword(event.target.value)}} id="input-login"
+        placeholder='Enter Password'></input>
+        {/* <br></br> */}
         <br></br>
-        <br></br>
-        <label>Retype Password</label>
+        <label id="label-login">Retype Password : </label>
         <input type="password"
-        onChange={(event)=>{setRePssword(event.target.value)}}></input>
+        onChange={(event)=>{setRePssword(event.target.value)}} id="input-login"
+        placeholder='Enter Same Password Again'></input>
+        {/* <br></br> */}
         <br></br>
-        <br></br>
-        <label>Email</label>
+        <label id="label-login">Email : </label>
         <input type="email"
-        onChange={(event)=>{setEmail(event.target.value)}}></input>
+        onChange={(event)=>{setEmail(event.target.value)}} id="input-login"
+        placeholder='Enter Email'></input>
+        {/* <br></br> */}
         <br></br>
-        <br></br>
-        <label>PhNo</label>
+        <label id="label-login">PhNo : </label>
         <input type="number"
-        onChange={(event)=>{setPhNo(event.target.value)}}></input>
+        onChange={(event)=>{setPhNo(event.target.value)}} id="input-login"
+        placeholder='Enter Phno'></input>
+        {/* <br></br> */}
         <br></br>
-        <br></br>
-        <label>Department</label>
-        <select type="dropdown" onClick={(event)=>{setDept(event.target.value)}}>
+        <label id="label-login">Department : </label>
+        <select style={{width: "50%"}} type="dropdown" onClick={(event)=>{setDept(event.target.value)}}
+        id="input-login">
             <option value="Dept">Dept</option>
             <option value="CSE">CSE</option>
             <option value="IT">IT</option>
@@ -97,7 +104,7 @@ function SignUpStudent() {
         </select>
         <br></br>
         <br></br>
-        <button onClick={submitStudent}>Submit</button>
+        <button id="button-login" onClick={submitStudent}>Submit</button>
     </div>
   );
 }
