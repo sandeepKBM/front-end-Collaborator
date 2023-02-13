@@ -1,10 +1,8 @@
 import './App.css';
 import  {useState ,useEffect} from "react";
-// import {useNavigate} from 'react-router-dom';
 import Axios from "axios";
 let vals = ""
 function DisPage() {
-    // const navigate=useNavigate();
     const [quotes,setQuotes]=useState("");
     const [textarr,setTextArr]=useState([])
     useEffect(() => {
@@ -36,19 +34,12 @@ function DisPage() {
       setTextArr([...textarr,{text:quotes,id: 200, time: new Date().toLocaleString() }]);
       let value1 = localStorage.getItem("id");
       let value2 = localStorage.getItem("dissID");
-      // const data = {
-      //     Text: vals,
-      //     dissID: value2,
-      //     userID: value1
-      // }
       console.log(typeof vals)
         Axios.post('http://localhost:8080/api/discussions/insertchat?text='+vals+'&dissID='+value2+'&userID='+value1).then((res) => {
 
         });
-
       console.log(textarr);
         alert('sucessfully done');
-        // navigate('/forum');
     }
   }
   return (
